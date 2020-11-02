@@ -1,0 +1,19 @@
+{
+  "name": "express-mongo",
+  "version": "1.0.0",
+  "description": "A API simple template for Express + MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Juni A. Brosas <powerlogic1992@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
