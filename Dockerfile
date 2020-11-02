@@ -13,4 +13,4 @@ EXPOSE 3000
 # install nodemon for changes on the fly
 RUN npm install -g nodemon
 # start server inside container
-CMD ["nodemon", "index.js"]
+CMD ["nodemon", "--legacy-watch", "index.js"]

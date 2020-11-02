@@ -27,8 +27,29 @@ const ItemSchema = new mongoose.Schema({
 Item = mongoose.model('item', ItemSchema);
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Post routes
+app.post('/item/add', async (req, res) => {
+  const newItem = new Item({
+    name: req.body.name,
+  });
+
+  await newItem.save();
+
+  res.json({ item: newItem });
+});
+
+// Get routes
 app.get('/', (req, res) => {
-  res.send("it's working :) hello world!");
+  res.send("it's working!");
+});
+
+app.get('/items', async (req, res) => {
+  try {
+    const items = await Item.find({});
+    res.json({ items });
+  } catch (error) {
+    res.status(500).end();
+  }
 });
 
 const port = 3000;
