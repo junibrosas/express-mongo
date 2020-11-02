@@ -6,10 +6,13 @@ services:
     build: ./
     ports:
       - 3000:3000
+      - 9229:9229
     volumes:
       - .:/app
     links:
       - mongo
+    command: npm run debug
+
   mongo:
     container_name: mongo
     image: mongo

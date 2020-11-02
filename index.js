@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const { addListener } = require('nodemon');
 const app = require('express')();
 
 // const mongoURL = 'mongodb://localhost/express-mongo';
@@ -40,6 +41,7 @@ app.post('/item/add', async (req, res) => {
 
 // Get routes
 app.get('/', (req, res) => {
+  console.log('hello');
   res.send("it's working!");
 });
 
