@@ -9,5 +9,3 @@ This is a very minimal setup of Express + MongoDB + Docker.
 - `docker-compose up --build` // to rebuild if you edited from Dockerfile or docker-compose.yml file then
 - `docker-compose down -v` // to remove containers
 - `docker-compose stop` // to stop if you have it running in the backgroud
-
-unwanted commit
